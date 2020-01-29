@@ -1,0 +1,56 @@
+﻿@model IEnumerable<WebApp.Models.Meal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>@ViewBag.Message</h2>
+@if (ViewBag.PreviousDay < 0)
+{
+    int prevday = (int)ViewBag.PreviousDay;
+
+    <h3>@Html.ActionLink("Previous Day", "Index", new { dayNum = prevday })</h3>
+}
+
+<h3>@Html.ActionLink("Today", "Index", new { dayNum = 0 })</h3>
+@if (ViewBag.Day < 0)
+{
+    
+    int nextday = (int)ViewBag.NextDay;
+
+    <h3>@Html.ActionLink("Next Day", "Index", new { dayNum = nextday })</h3>
+}
+
+<p>
+    @Html.ActionLink("Add", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Recipe.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Servings)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Recipe.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Servings)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MealId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MealId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MealId })
+            </td>
+        </tr>
+    }
+
+</table>

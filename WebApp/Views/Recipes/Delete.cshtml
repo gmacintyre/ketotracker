@@ -1,0 +1,112 @@
+﻿@model WebApp.Models.Recipe
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Recipe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Servings)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Servings)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloriesTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloriesTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloriesPerServing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloriesPerServing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatPerServing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatPerServing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProteinTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProteinTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProteinPerServing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProteinPerServing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetCarbsTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetCarbsTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetCarbsPerServing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetCarbsPerServing)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

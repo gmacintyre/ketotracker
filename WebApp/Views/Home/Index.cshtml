@@ -1,0 +1,22 @@
+﻿@model WebApp.ViewModels.IntakeViewModel
+<div class="jumbotron">
+    <h2>Track It</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>What I Ate Today</h3>
+        <p><b>@Model.CalorieIntake</b> of @Model.MaxCalories Calories</p>
+        <p><b>@Model.CarbIntake</b> of @Model.MaxCarbs Carbs</p>
+        <p><b>@Model.FatIntake</b> of @Model.MaxFat Fat</p>
+        <p><b>@Model.ProteinIntake</b> of @Model.MaxProtein Protein</p>
+        <button>Add</button>
+    </div>
+    <div class="col-md-4">
+        <p>My recipes</p>
+    </div>
+    <div class="col-md-4">
+        <p>My favorite Recipes</p>
+    </div>
+
+</div>

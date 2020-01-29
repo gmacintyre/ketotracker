@@ -1,0 +1,44 @@
+﻿@model WebApp.Models.UserProfile
+
+<div>
+    <h4>UserProfile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+      
+        <dt>
+            @Html.DisplayNameFor(model => model.CaloricIntakePerDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CaloricIntakePerDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FatPerDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FatPerDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProteinPerDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProteinPerDay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetCarbsPerDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetCarbsPerDay)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit")
+</p>

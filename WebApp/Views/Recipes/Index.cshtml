@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebApp.Models.Recipe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Url)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Servings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaloriesTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CaloriesPerServing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatPerServing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProteinTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProteinPerServing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetCarbsTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetCarbsPerServing)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Url)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Servings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaloriesTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CaloriesPerServing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatPerServing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProteinTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProteinPerServing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetCarbsTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetCarbsPerServing)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RecipeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RecipeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RecipeId })
+        </td>
+    </tr>
+}
+
+</table>
